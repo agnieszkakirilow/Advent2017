@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Projects/Advent/myTree/main.cpp
+iostream
+-
+string
+-
+cstring
+-
+myTree.cpp
+C:/Projects/Advent/myTree/myTree.cpp
+
+C:/Projects/Advent/myTree/myTree.cpp
+myTree.hpp
+C:/Projects/Advent/myTree/myTree.hpp
+
+C:/Projects/Advent/myTree/myTree.hpp
+
