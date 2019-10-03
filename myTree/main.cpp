@@ -17,6 +17,29 @@ int main()
     root->children[2] = nullptr;
     root->children[3] = nullptr;
 
+    root2 = (Node*)malloc(sizeof(Node));
+    root2->childrenCount = 0;
+    root2->weight = 10;
+    root2->name = (char*)malloc(2);
+    strcpy(root2->name, "a2");
+    root2->parent = nullptr;//what is the difference between NULL and nullptr?
+    root2->children[0] = nullptr;
+    root2->children[1] = nullptr;
+    root2->children[2] = nullptr;
+    root2->children[3] = nullptr;
+
+    Node* tmp2;
+    tmp2 = root;
+
+    int weights2[4] = {0};
+
+    traverseTree(tmp2->children[0], &(weights2[0]));
+    traverseTree(tmp2->children[1], &(weights2[1]));
+    traverseTree(tmp2->children[2], &(weights2[2]));
+    traverseTree(tmp2->children[3], &(weights2[3]));
+
+    //std::cout << "whereToAdd=" << whereToAdd->name << std::endl;
+
     insertChild(root, 5, "b");
     insertChild(root, 5, "c");
     insertChild(root, 5, "d");

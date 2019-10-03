@@ -15,6 +15,28 @@ void insertChild(Node* tmp, int weight, const char *name)
     (tmp->childrenCount)++;
 }
 
+void insertChild2(int weight, const char *name)
+{
+    Node *tmp, *parent;
+    tmp = (Node*)malloc(sizeof(Node));
+    tmp->weight = weight;
+    tmp->childrenCount = 0;
+    tmp->name = (char*)malloc(MAXNAME);
+    strcpy(tmp->name, name);
+    tmp->children[0] = nullptr;
+    tmp->children[1] = nullptr;
+    tmp->children[2] = nullptr;
+    tmp->children[3] = nullptr;
+    parent = root;
+    if(root == nullptr)
+    {
+        root = tmp;
+    }
+    else
+    {
+
+    }
+}
 void traverseTree(Node* tmp, int* weight)
 {
 
@@ -27,6 +49,7 @@ void traverseTree(Node* tmp, int* weight)
         traverseTree(tmp->children[2], weight);
         traverseTree(tmp->children[3], weight);
     }
+    whereToAdd = tmp;
 }
 
 void printNode(Node *tmp)

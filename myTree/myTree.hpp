@@ -1,6 +1,8 @@
 #ifndef MYTREE_HPP
 #define MYTREE_HPP
+
 const int MAX = 4;
+const int MAXNAME = 20;
 
 typedef struct Node
 {
@@ -13,9 +15,11 @@ typedef struct Node
 } Node;
 
 static Node* root = nullptr;
+static Node* root2 = nullptr;
+static Node* whereToAdd = nullptr;
 
 void insertChild(Node* tmp, int weight, const char *name);
-//void insertChild2(int weight, const char*);
+void insertChild2(int weight, const char *name);
 void traverseTree(Node* tmp, int *weight);
 void printNode(Node* tmp);
 void printWeights(int* weights);
