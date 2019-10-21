@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Projects/Advent/stream/main.cpp
+iostream
+-
+stream.cpp
+C:/Projects/Advent/stream/stream.cpp
+
+C:/Projects/Advent/stream/stream.cpp
+fstream
+-
+stream.hpp
+C:/Projects/Advent/stream/stream.hpp
+
+C:/Projects/Advent/stream/stream.hpp
+

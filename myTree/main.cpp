@@ -22,7 +22,7 @@ int main()
     root2->weight = 10;
     root2->name = (char*)malloc(2);
     strcpy(root2->name, "a2");
-    root2->parent = nullptr;//what is the difference between NULL and nullptr?
+    root2->parent = nullptr;
     root2->children[0] = nullptr;
     root2->children[1] = nullptr;
     root2->children[2] = nullptr;

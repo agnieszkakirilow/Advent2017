@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Projects/Advent/hexgrid/hexgrid.cpp
+fstream
+-
+hexgrid.hpp
+C:/Projects/Advent/hexgrid/hexgrid.hpp
+
+C:/Projects/Advent/hexgrid/hexgrid.hpp
+array
+-
+
+C:/Projects/Advent/hexgrid/main.cpp
+iostream
+-
+hexgrid.cpp
+C:/Projects/Advent/hexgrid/hexgrid.cpp
+

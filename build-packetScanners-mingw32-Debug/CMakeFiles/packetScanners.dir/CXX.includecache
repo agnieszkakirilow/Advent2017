@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Projects/Advent/packetScanners/main.cpp
+iostream
+-
+packetscanners.cpp
+C:/Projects/Advent/packetScanners/packetscanners.cpp
+
+C:/Projects/Advent/packetScanners/packetscanners.cpp
+string
+-
+fstream
+-
+packetscanners.hpp
+C:/Projects/Advent/packetScanners/packetscanners.hpp
+
+C:/Projects/Advent/packetScanners/packetscanners.hpp
+array
+-
+fstream
+-
+

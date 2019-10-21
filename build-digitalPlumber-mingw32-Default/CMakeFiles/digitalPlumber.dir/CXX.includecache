@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Projects/Advent/digitalPlumber/digitalplumber.cpp
+iostream
+-
+string
+-
+algorithm
+-
+digitalplumber.hpp
+C:/Projects/Advent/digitalPlumber/digitalplumber.hpp
+
+C:/Projects/Advent/digitalPlumber/digitalplumber.hpp
+array
+-
+fstream
+-
+
+C:/Projects/Advent/digitalPlumber/main.cpp
+iostream
+-
+digitalplumber.cpp
+C:/Projects/Advent/digitalPlumber/digitalplumber.cpp
+

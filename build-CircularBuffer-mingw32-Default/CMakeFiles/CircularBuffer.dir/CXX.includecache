@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Projects/Advent/CircularBuffer/circularbuffer.cpp
+fstream
+-
+array
+-
+string
+-
+circularbuffer.hpp
+C:/Projects/Advent/CircularBuffer/circularbuffer.hpp
+
+C:/Projects/Advent/CircularBuffer/circularbuffer.hpp
+array
+-
+
+C:/Projects/Advent/CircularBuffer/main.cpp
+iostream
+-
+circularbuffer.cpp
+C:/Projects/Advent/CircularBuffer/circularbuffer.cpp
+

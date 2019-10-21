@@ -1,0 +1,3 @@
+C:\Tool\Common\cmake\bin\cmake.exe -E remove -f CMakeFiles\packetScanners.dir/objects.a
+C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\ar.exe cr CMakeFiles\packetScanners.dir/objects.a @CMakeFiles\packetScanners.dir\objects1.rsp
+C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  -g    -Wl,--whole-archive CMakeFiles\packetScanners.dir/objects.a -Wl,--no-whole-archive  -o packetScanners.exe -Wl,--out-implib,libpacketScanners.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

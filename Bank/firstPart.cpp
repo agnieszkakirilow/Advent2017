@@ -57,16 +57,9 @@ int main()
         for (int i = originalArray[bankMax]; i > 0; i--)
         {
             //std::cout << "i=" << i << " j=" << j << std::endl;
-            changeableArray[j]++;
+            changeableArray[j%lastIndex]++;
             //std::cout << "value=" << changeableArray[j] << std::endl;
-            if ( j == lastIndex )
-            {
-                j = 0;
-            }
-            else
-            {
-                j++;
-            }
+
         }
 //        for (auto x : changeableArray)
 //        {
