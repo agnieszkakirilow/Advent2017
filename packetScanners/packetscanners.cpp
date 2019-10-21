@@ -15,37 +15,13 @@ void readIntoArray(std::ifstream &file)
         lineIntoString(buffer, bufArr);
         i = stoi(bufArr[0]);
         arr[i].range = stoi(bufArr[1]);
-        arr[i].movesToMake = arr[i].range - 1;
-        arr[i].mtmMobile = arr[i].range - 1;
+        arr[i].movesToZero = (arr[i].range *2) - 2;
         //std::cout << "i=" << i << "r=" << arr[i].range << std::endl;
         i++;
     }
     file.close();
 }
 
-void Scanner ::scannerMove()
-{
-    if(moveUp)
-    {
-        rangePos++;
-        mtmMobile--;
-        if(!mtmMobile)
-        {
-            moveUp = false;
-            mtmMobile = movesToMake;
-        }
-    }
-    else
-    {
-        rangePos--;
-        mtmMobile--;
-        if(!mtmMobile)
-        {
-            moveUp = true;
-            mtmMobile = movesToMake;
-        }
-    }
-}
 
 void eraseChar(char ch, int number, std::string &str)
 {
@@ -79,35 +55,23 @@ void lineIntoString(std::string my, std::array<std::string, buffArrSize> &arr)
     arr[i] = word;
 }
 
-bool isCaught(int dep)
+bool isCaughtDel(int dep, int del)
 {
     bool result = false;
-    if(arr[dep].rangePos == 0 && arr[dep].range != 0)
+    if((dep + del) % arr[dep].movesToZero == 0)
     {
         result = true;
     }
     return result;
 }
-
 void crossFirewall()
 {
-    for(int i = 0 - delay; i < arrDepth; i++)
+    for(int i = 0; i < arrDepth; i++)
     {
-        if( isCaught(i))
+        if( arr[i].range != 0 && isCaughtDel(i, 0))
         {
             severity += i * arr[i].range;
-        }
-        for(int j = 0; j < arrDepth; j++)
-        {
-            if(arr[j].range != 0)
-            {
-                arr[j].scannerMove();
-                std::cout << "j=" << j << "i=" << i << "   "
-                          << arr[j].range << "   "
-                          << arr[j].rangePos << "   "
-                          << arr[j].movesToMake << "   "
-                          << arr[j].moveUp << std::endl;
-            }
+            //std::cout << "i=" << i << std::endl;
         }
     }
 }
@@ -115,38 +79,17 @@ void crossFirewall()
 void crossFirewallNotCaught(int del)
 {
     caught = true;
-    for(int i = - del; i < arrDepth; i++)
+    for(int i = 0; i < (arrDepth); i++)
     {
-        if( i >= 0 && isCaught(i))
+        if( arr[i].range != 0 && isCaughtDel(i, del))
         {
-            std::cout << "i=" << i << std::endl;
+            //std::cout << "i=" << i << std::endl;
             caught = false;
             break;
         }
-        for(int j = 0; j < arrDepth; j++)
-        {
-            if(arr[j].range != 0)
-            {
-                arr[j].scannerMove();
-//                std::cout << "j=" << j << "   "
-//                          << arr[j].range << "   "
-//                          << arr[j].rangePos << "   "
-//                          << arr[j].movesToMake << "   "
-//                          << arr[j].moveUp << std::endl;
-            }
-        }
     }
 }
 
-void clearPositions()
-{
-    for(int i = 0; i < arrDepth; i++)
-    {
-        arr[i].rangePos = 0;
-        arr[i].mtmMobile = arr[i].movesToMake;
-        arr[i].moveUp = true;
 
-    }
-}
 
 

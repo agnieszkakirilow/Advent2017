@@ -4,14 +4,16 @@
 int main()
 {
     readIntoArray(file);
-//    crossFirewall();
-//    std::cout << severity;
+    crossFirewall();
+    std::cout << severity << std::endl;
+    //crossFirewallNotCaught(1);
     while( !caught )
     {
-        std::cout << "del=" << delay << std::endl;
+        //std::cout << "del=" << delay << std::endl;
         crossFirewallNotCaught(delay);
         delay++;
-        clearPositions();
+        //std::cout << "caught=" << caught << std::endl;
     }
+    std::cout << "delay=" << delay << std::endl;
     return 0;
 }
