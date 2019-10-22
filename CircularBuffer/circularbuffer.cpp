@@ -3,9 +3,11 @@
 #include<string>
 #include "circularbuffer.hpp"
 
-void readIntoArray(std::ifstream &myfile, std::array<int, LENGTHSIZE> &arr)
+
+
+void readIntoArray(std::string &filePath, std::array<int, LENGTHSIZE> &arr)
 {
-    myfile.open("C:/Projects/Advent/CircularBuffer/input.txt");
+    myfile.open(filePath);
     int i = 0;
     std::string stringBuffer;
     while(std::getline(myfile, stringBuffer, ',' ))
@@ -131,9 +133,9 @@ void multiplyFirstTwo()
     std::cout << "result=" << result << std::endl;
 }
 
-void readStringIntoArray(std::ifstream &myfile, std::array<int, ASCIISIZE> &arr)
+void readStringIntoArray(std::string &filePath, std::array<int, ASCIISIZE> &arr)
 {
-    myfile.open("C:/Projects/Advent/CircularBuffer/input.txt");
+    myfile.open(filePath);
     std::string stringBuffer;
     std::getline(myfile, stringBuffer);
     for(int i = 0; i < (ASCIISIZE - NUMTOADDSIZE); i++)

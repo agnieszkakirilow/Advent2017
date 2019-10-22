@@ -15,6 +15,7 @@ int skip = 0;
 std::array<int, SIZE> buffer;
 std::array<int, SIZE> asciiBuffer;
 std::ifstream myfile;
+std::string path = "C:/Projects/Advent/CircularBuffer/input.txt";
 std::array<int, LENGTHSIZE> lengthArray;
 std::array<int, LENGTHSIZE> denseHash;
 
@@ -22,13 +23,13 @@ std::array<int, ASCIISIZE> AsciiArray;
 std::array<int, NUMTOADDSIZE> NumToAdd = {17,31,73,47,23};
 char result[32];
 
-void readIntoArray(std::ifstream &myfile, std::array<int, LENGTHSIZE> &arr);
+void readIntoArray(std::string &filePath, std::array<int, LENGTHSIZE> &arr);
 void fillArray(std::array<int, SIZE> &arr);
 void printArray(std::array<int, SIZE> &arr);
 void perform(std::array<int, SIZE> &arr, std::array<int, LENGTHSIZE> &lArray );
 void multiplyFirstTwo();
 
-void readStringIntoArray(std::ifstream &myfile, std::array<int, ASCIISIZE> &arr);
+void readStringIntoArray(std::string &filePath, std::array<int, ASCIISIZE> &arr);
 void performAsciiArray(std::array<int, SIZE> &arr, std::array<int, ASCIISIZE> &lArray);
 void performInLoop();
 void createDenseHash(std::array<int, SIZE> &arr, std::array<int, LENGTHSIZE> &lArray);

@@ -7,7 +7,7 @@
 int main()
 {
 
-    readIntoArray(myfile, lengthArray);
+    readIntoArray(path, lengthArray);
     fillArray(buffer);
     fillArray(asciiBuffer);
 
@@ -27,7 +27,7 @@ int main()
 //    }
 //    std::cout << std::endl;
 
-    readStringIntoArray(myfile, AsciiArray);
+    readStringIntoArray(path, AsciiArray);
     performInLoop();
     createDenseHash(asciiBuffer, denseHash);
 
