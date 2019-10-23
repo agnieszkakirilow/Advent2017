@@ -140,8 +140,8 @@ void readStringIntoArray(std::string &filePath, std::array<int, ASCIISIZE> &arr)
     std::getline(myfile, stringBuffer);
     for(int i = 0; i < (ASCIISIZE - NUMTOADDSIZE); i++)
     {
-        arr[i] = stringBuffer.at(i);
-        //std::cout << "s=" << stringBuffer.at(i) << "as=" << arr[i] << "   ";
+        arr[i] = stringBuffer.at(i);//extracts characters from a given string
+        std::cout << "s=" << stringBuffer.at(i) << "as=" << arr[i] << "   ";
     }
     int j = 0;
     for(int i = (ASCIISIZE-NUMTOADDSIZE); i < ASCIISIZE; i++)
@@ -150,7 +150,7 @@ void readStringIntoArray(std::string &filePath, std::array<int, ASCIISIZE> &arr)
         //std::cout << "NumToAdd=" << arr[i] << "   ";
         j++;
     }
-    //std::cout << std::endl;
+    std::cout << std::endl;
     myfile.close();
 }
 
@@ -265,17 +265,17 @@ void createDenseHash(std::array<int, SIZE> &arr, std::array<int, LENGTHSIZE> &lA
             //std::cout << "j" << j+(i*LENGTHSIZE)  << "   ";
         }
         lArray[i] = number;
-        //std::cout << std::hex << number << "   ";
+        std::cout << number << "   ";
     }
-    //std::cout << std::endl;
+    std::cout << std::endl;
 }
 
-void writeIntoString(char* str)
-{
-    for(int i = 0; i < ASCIISIZE; i++)
-    {
-        str+=denseHash[i];
-        //std::cout << str << " ";
-    }
-}
+//void writeIntoString(char* str)
+//{
+//    for(int i = 0; i < ASCIISIZE; i++)
+//    {
+//        str+=denseHash[i];
+//        //std::cout << str << " ";
+//    }
+//}
 //d0 67 d3 f1 4d 7 e0 9c 2e 73 8 c3 92 66 5 c4

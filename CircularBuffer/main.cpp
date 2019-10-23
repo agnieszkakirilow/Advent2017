@@ -7,8 +7,8 @@
 int main()
 {
 
-    readIntoArray(path, lengthArray);
-    fillArray(buffer);
+//    readIntoArray(path, lengthArray);
+//    fillArray(buffer);
     fillArray(asciiBuffer);
 
 //    for(auto x : lengthArray)
@@ -44,7 +44,7 @@ int main()
     }
     std::cout << std::endl;
 
-    writeIntoString(result);
+    //writeIntoString(result);
     std::cout << result;
 
     return 0;

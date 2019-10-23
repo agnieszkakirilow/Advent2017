@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Projects/Advent/CircularBuffer/circularbuffer.cpp
+fstream
+-
+array
+-
+string
+-
+circularbuffer.hpp
+C:/Projects/Advent/CircularBuffer/circularbuffer.hpp
+
+C:/Projects/Advent/CircularBuffer/circularbuffer.hpp
+fstream
+-
+array
+-
+
+C:/Projects/Advent/diskDefragmentation/diskdefragmentation.cpp
+diskdefragmentation.hpp
+C:/Projects/Advent/diskDefragmentation/diskdefragmentation.hpp
+../CircularBuffer/circularbuffer.hpp
+C:/Projects/Advent/CircularBuffer/circularbuffer.hpp
+../CircularBuffer/circularbuffer.cpp
+C:/Projects/Advent/CircularBuffer/circularbuffer.cpp
+
+C:/Projects/Advent/diskDefragmentation/diskdefragmentation.hpp
+string
+-
+array
+-
+../CircularBuffer/circularbuffer.hpp
+C:/Projects/Advent/CircularBuffer/circularbuffer.hpp
+
+C:/Projects/Advent/diskDefragmentation/main.cpp
+iostream
+-
+diskdefragmentation.cpp
+C:/Projects/Advent/diskDefragmentation/diskdefragmentation.cpp
+

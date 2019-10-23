@@ -1,3 +1,4 @@
+#include<fstream>
 #include<array>
 #ifndef CIRCULARBUFFER_HPP
 #define CIRCULARBUFFER_HPP
