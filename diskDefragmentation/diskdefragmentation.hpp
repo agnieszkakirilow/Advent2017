@@ -6,7 +6,7 @@
 #define DISKDEFRAGMENTATION_HPP
 const int DISKSIZE = 128;
 const int BITNR = 8;
-std::string input = "flqrgnkx-";
+std::string input = "nbysizxe-";
 std::array<std::string, DISKSIZE> inputArr;
 void addToString();
 std::array<int, SIZE> hashArr;

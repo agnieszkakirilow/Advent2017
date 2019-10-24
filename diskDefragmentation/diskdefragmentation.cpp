@@ -15,12 +15,18 @@ void addToString()
 void performString(std::array<int, SIZE> &arr, std::string &str)
 {
     int length = 0;
-    std::cout << str.length() << "=length" << std::endl;
+    //std::cout << str.length() << "=length" << std::endl;
     std::array<int, SIZE> tmparr;
-    for(int w = 0; w < str.length(); w++)
+    int z = 0;
+    for(int w = 0; w < (str.length() + 5); w++)
     {
         length = str[w];
-        std::cout << "length" << length <<std::endl;//<< "cur" << current << " ";
+        if(w >= str.length())
+        {
+            length = NumToAdd[z];
+            z++;
+        }
+        //std::cout << "length" << length <<std::endl;//<< "cur" << current << " ";
         if((current+length) <= END)
         {
             //std::cout << "if" << std::endl;
@@ -45,14 +51,8 @@ void performString(std::array<int, SIZE> &arr, std::string &str)
                 tmparr[j] = arr[k];
                 //std::cout << "j" << j << "k" << k << "arr" << arr[k] << "   ";
                 j++;
-                if(k == END)
-                {
-                    k = 0;
-                }
-                else
-                {
-                    k++;
-                }
+                k++;
+                k = k%SIZE;
             }
             for(int i = 0; i < length/2; i++)
             {
@@ -67,14 +67,8 @@ void performString(std::array<int, SIZE> &arr, std::string &str)
                 arr[m] = tmparr[l];
                 //std::cout << "m" << m << "l" << l << "arr" << arr[m] << "   ";
                 l++;
-                if(m == END)
-                {
-                    m = 0;
-                }
-                else
-                {
-                    m++;
-                }
+                m++;
+                m = m%SIZE;
             }
         }
         int newcurr = current + length + skip;
@@ -87,15 +81,8 @@ void performString(std::array<int, SIZE> &arr, std::string &str)
             int j = 0;
             for(int i = 0; i < newcurr; i++)
             {
-                if (j == END)
-                {
-                    j = 0;
-                }
-                else
-                {
-
-                    j++;
-                }
+                j++;
+                j = j%SIZE;
             }
             current = j;
         }
@@ -110,7 +97,7 @@ void loopStr(int strIndex)
     {
         performString(hashArr, inputArr[strIndex]);
     }
-    std::cout << "str=" << inputArr[strIndex] << std::endl;
+    //std::cout << "str=" << inputArr[strIndex] << std::endl;
 }
 
 void countBits(std::array<int,LENGTHSIZE> &arr)

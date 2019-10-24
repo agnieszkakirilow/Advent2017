@@ -265,9 +265,9 @@ void createDenseHash(std::array<int, SIZE> &arr, std::array<int, LENGTHSIZE> &lA
             //std::cout << "j" << j+(i*LENGTHSIZE)  << "   ";
         }
         lArray[i] = number;
-        std::cout << number << "   ";
+        //std::cout << number << "   ";
     }
-    std::cout << std::endl;
+    //std::cout << std::endl;
 }
 
 //void writeIntoString(char* str)
