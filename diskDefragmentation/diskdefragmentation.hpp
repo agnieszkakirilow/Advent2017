@@ -13,6 +13,8 @@ std::array<int, SIZE> hashArr;
 void performString(std::array<int, SIZE> &arr, std::string &str);
 void loopStr(int strIndex);
 std::array<int, LENGTHSIZE> denseHashArr;
+std::array<int, LENGTHSIZE> prevDenseHashArr;
 int count = 0;
+int region = 0;
 void countBits(std::array<int,LENGTHSIZE> &arr);
 #endif // DISKDEFRAGMENTATION_HPP

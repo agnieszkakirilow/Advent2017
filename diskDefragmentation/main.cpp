@@ -14,6 +14,7 @@ int main()
         fillArray(hashArr);
         loopStr(n);
         createDenseHash(hashArr, denseHashArr);
+        prevDenseHashArr = denseHashArr;
         countBits(denseHashArr);
         current = 0;
         skip = 0;

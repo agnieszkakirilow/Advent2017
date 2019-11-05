@@ -106,7 +106,41 @@ void countBits(std::array<int,LENGTHSIZE> &arr)
     {
         for(int r = BITNR - 1; r >=0; r--)
         {
-            if ((arr[p] >> r) & 1)
+            if ((arr[p] >> r) & 1 )
+            {
+                count++;
+            }
+            //std::cout << ((arr[p]>>r) & 1 ) << "   ";
+        }
+        //std::cout << std::endl;
+    }
+}
+
+void countBits(std::array<int,LENGTHSIZE> &arr)
+{
+    bool prev = false;
+    for(int p = 0; p < LENGTHSIZE; p++)
+    {
+        for(int r = BITNR - 1; r >=0; r--)
+        {
+            if( n==0)
+            {
+                if ((arr[p] >> r) & 1 )
+                {
+                    if(!prev)
+                    {
+                        region++;
+                    }
+                    prev = true;
+                }
+                else
+                {
+                    prev = false;
+                }
+            }
+            else
+
+            if ((arr[p] >> r) & 1 )
             {
                 count++;
             }
