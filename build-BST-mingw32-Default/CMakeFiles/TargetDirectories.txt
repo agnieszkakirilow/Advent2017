@@ -1,1 +1,0 @@
-C:/Projects/Advent/build-BST-mingw32-Default/CMakeFiles/BST.dir
