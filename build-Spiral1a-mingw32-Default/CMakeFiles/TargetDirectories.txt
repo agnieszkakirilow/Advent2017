@@ -1,1 +1,0 @@
-C:/Projects/Advent/build-Spiral1a-mingw32-Default/CMakeFiles/Spiral1a.dir

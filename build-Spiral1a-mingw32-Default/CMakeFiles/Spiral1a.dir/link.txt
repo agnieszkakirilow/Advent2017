@@ -1,3 +1,0 @@
-C:\Tool\Common\cmake\bin\cmake.exe -E remove -f CMakeFiles\Spiral1a.dir/objects.a
-C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\ar.exe cr CMakeFiles\Spiral1a.dir/objects.a @CMakeFiles\Spiral1a.dir\objects1.rsp
-C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE      -Wl,--whole-archive CMakeFiles\Spiral1a.dir/objects.a -Wl,--no-whole-archive  -o Spiral1a.exe -Wl,--out-implib,libSpiral1a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
