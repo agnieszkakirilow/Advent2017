@@ -1,1 +1,0 @@
-C:/Projects/Advent/build-Bank-mingw32-Default/CMakeFiles/Bank.dir
